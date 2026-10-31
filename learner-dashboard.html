@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBridge | Learner Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="js/dashboard.js" defer></script>
+            <link rel="icon" type="image/jpg" href="image/b.jpg">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <a href="index.html" class="logo dashboard-logo">
+                <span class="logo-icon">S</span>
+                SkillBridge
+            </a>
+
+            <p class="sidebar-label">LEARNING MENU</p>
+
+            <nav class="dashboard-nav">
+                <a href="learner-dashboard.html" class="active">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="courses.html">
+                    <span>▤</span> My Courses
+                </a>
+
+                <a href="#assignments">
+                    <span>✓</span> Assignments
+                </a>
+
+                <a href="#projects">
+                    <span>▣</span> My Projects
+                </a>
+
+                <a href="#progress">
+                    <span>↗</span> My Progress
+                </a>
+
+                <a href="#mentors">
+                    <span>♧</span> Mentors
+                </a>
+                <a href="#profile">
+                <span>▤</span> My Profile
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html">← Back to Website</a>
+                <a href="login.html" id="logoutlink">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main dashboard -->
+        <main class="dashboard-main">
+
+            <!-- Top bar -->
+            <header class="dashboard-topbar">
+                <div>
+                    <p class="dashboard-label">LEARNER SPACE</p>
+                    <h2>My Dashboard</h2>
+                </div>
+
+                <div class="learner-profile">
+                    <div class="profile-avatar">L</div>
+                    <div>
+                        <strong>Learner</strong>
+                        <p>Student Account</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Welcome section -->
+            <section class="welcome-banner">
+                <div>
+                    <p class="welcome-eyebrow">YOUR LEARNING JOURNEY</p>
+                    <h1>Welcome back, Learner! 👋</h1>
+                    <p>
+                        Keep learning, keep building, and keep growing.
+                        Your next achievement starts today.
+                    </p>
+                    <a href="courses.html" class="btn">
+                        Continue Learning →
+                    </a>
+                </div>
+
+                <div class="welcome-symbol">🎯</div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="dashboard-stats" aria-label="Learning summary">
+
+                <article class="stat-card">
+                    <div class="stat-icon green">▤</div>
+                    <p>Enrolled Courses</p>
+                    <h2>3</h2>
+                    <span>Courses you're learning</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon blue">↗</div>
+                    <p>Overall Progress</p>
+                    <h2>65%</h2>
+                    <span>Across your courses</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon orange">✓</div>
+                    <p>Pending Tasks</p>
+                    <h2>4</h2>
+                    <span>Tasks to work on</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">▣</div>
+                    <p>Completed Projects</p>
+                    <h2>2</h2>
+                    <span>Projects in your portfolio</span>
+                </article>
+
+            </section>
+
+            <!-- Course progress -->
+            <section class="dashboard-section" id="progress">
+
+                <div class="section-title-row">
+                    <div>
+                        <h2>Continue Learning</h2>
+                        <p>Pick up where you left off.</p>
+                    </div>
+
+                    <a href="courses.html" class="text-link">
+                        Explore Courses →
+                    </a>
+                </div>
+
+                <div class="learning-grid">
+
+                    <article class="learning-card">
+                        <div class="learning-art web-art"> &lt;/&gt; </div>
+
+                        <div class="learning-content">
+                            <span class="course-tag">BEGINNER</span>
+                            <h3>Web Development</h3>
+                            <p>HTML, CSS and JavaScript</p>
+
+                            <div class="progress-heading">
+                                <span>Course progress</span>
+                                <strong>70%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+
+                            <a href="courses.html" class="btn dashboard-btn">
+                                Continue Course →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="learning-card">
+                        <div class="learning-art data-art">📊</div>
+
+                        <div class="learning-content">
+                            <span class="course-tag">BEGINNER</span>
+                            <h3>Data Science</h3>
+                            <p>Data analysis and visualisation</p>
+
+                            <div class="progress-heading">
+                             <span>Course progress</span>
+                              <strong class="progress-percent">45%</strong>
+                            </div>
+
+                       <div class="progress-track">
+                         <div class="progress-fill" style="width: 45%"></div>
+                       </div>
+
+                        <button type="button" class="lesson-complete-btn">
+                           Mark lesson complete (+10%)
+                        </button>
+
+
+                            <a href="courses.html" class="btn dashboard-btn">
+                                Continue Course →
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Tasks and goals -->
+            <section class="dashboard-bottom">
+
+                
+                <article class="dashboard-panel" id="assignments">
+
+    <div class="section-title-row">
+        <h2>Upcoming Tasks</h2>
+        <span class="task-count" id="taskCount">3 tasks remaining</span>
+    </div>
+
+    <div class="task-item" data-task-id="task1">
+        <div>
+            <strong>Build a personal webpage</strong>
+            <p>Web Development · Practice</p>
+        </div>
+        <button type="button" class="task-status">
+            Mark complete
+        </button>
+    </div>
+
+    <div class="task-item" data-task-id="task2">
+        <div>
+            <strong>Complete CSS exercises</strong>
+            <p>Web Development · Assignment</p>
+        </div>
+        <button type="button" class="task-status">
+            Mark complete
+        </button>
+    </div>
+
+    <div class="task-item" data-task-id="task3">
+        <div>
+            <strong>Review your course notes</strong>
+            <p>Data Science · Study task</p>
+        </div>
+        <button type="button" class="task-status">
+            Mark complete
+        </button>
+    </div>
+
+</article>
+
+
+                <article class="dashboard-panel goal-panel" id="projects">
+                    <div class="goal-icon">🚀</div>
+                    <h2>Your Next Goal</h2>
+                    <p>
+                        Complete a practical project and add it
+                        to your portfolio.
+                    </p>
+                    <a href="#mentors" class="text-link">
+                        View your goals →
+                    </a>
+                </article>
+
+            </section>
+
+            <!-- Mentorship -->
+            <section class="dashboard-panel mentor-panel" id="mentors">
+                <div>
+                    <h2>Need help with your learning?</h2>
+                    <p>
+                        Mentorship features will help learners receive
+                        guidance and feedback on their projects.
+                    </p>
+                </div>
+
+                <span class="mentor-icon">🤝</span>
+            </section>
+
+            <!-- MY PROFILE -->
+<section class="dashboard-panel profile-panel" id="profile">
+    <div class="section-title-row">
+        <h2>My Profile</h2>
+        <span>Learning account</span>
+    </div>
+
+    <form id="profileForm">
+        <div class="profile-avatar-large" id="profileInitial">L</div>
+
+        <div class="profile-field">
+            <label for="profileName">Full Name</label>
+            <input
+                type="text"
+                id="profileName"
+                name="profileName"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+        <div class="profile-field">
+            <label for="profileEmail">Email Address</label>
+            <input
+                type="email"
+                id="profileEmail"
+                name="profileEmail"
+                placeholder="Enter your email"
+                required
+            >
+        </div>
+
+        <div class="profile-field">
+            <label for="profileGoal">Learning Goal</label>
+            <input
+                type="text"
+                id="profileGoal"
+                name="profileGoal"
+                placeholder="e.g. Become a web developer"
+            >
+        </div>
+
+        <button type="submit" class="profile-save-btn">
+            Save Profile
+        </button>
+
+        <p id="profileMessage" role="status" aria-live="polite"></p>
+    </form>
+</section>
+
+
+            <footer class="dashboard-footer">
+                <p>© 2026 SkillBridge. Learn skills. Build projects. Grow your future.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

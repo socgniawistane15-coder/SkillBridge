@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+            <link rel="icon" type="image/jpg" href="image/b.jpg">
+</head>
+
+<body class="auth-page">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            SkillBridge
+        </a>
+
+        <a href="index.html" class="login-link">← Back to Home</a>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="auth-welcome">
+            <p class="eyebrow">START SOMETHING GREAT</p>
+
+            <h1>
+                Your future<br>
+                <span>starts with one step.</span>
+            </h1>
+
+            <p>
+                Join SkillBridge to learn new skills, practise
+                through projects, receive guidance, and connect
+                with a community of learners.
+            </p>
+
+            <div class="auth-illustration">🚀 🎯 🌱</div>
+        </section>
+
+        <section class="auth-form-area">
+            <div class="auth-card">
+
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">
+                    Join SkillBridge and start your learning journey.
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Full name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email address</label>
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userRole">I want to join as</label>
+                        <select id="userRole" name="role" required>
+                            <option value="learner">Learner</option>
+                            <option value="mentor">Mentor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="At least 8 characters"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Enter your password again"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn auth-submit">
+                        Create Account
+                    </button>
+
+                    <div
+                        class="auth-message"
+                        id="registerMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
